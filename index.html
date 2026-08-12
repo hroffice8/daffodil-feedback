@@ -49,19 +49,17 @@
       
       textarea { width: 100%; padding: 14px; border: 1px solid var(--border-color); border-radius: 8px; box-sizing: border-box; font-family: inherit; font-size: 14px; resize: vertical; background: var(--card-bg); color: var(--text-question); }
       textarea:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 1px var(--primary-color); }
-      button[type="submit"] { background-color: var(--primary-color); color: white; border: none; padding: 16px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; box-shadow: 0 4px 6px -1px rgba(37,99,235,0.2); transition: 0.2s; margin-top: 10px; }
+      button[type="submit"] { background-color: var(--primary-color); color: white; border: none; padding: 16px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2); transition: 0.2s; margin-top: 10px; }
       button[type="submit"]:hover { background-color: var(--primary-hover); }
       
       .success-msg { display: none; text-align: center; padding: 40px 20px; background: white; border-radius: 12px; border: 1px solid var(--border-color); }
       .success-msg h2 { color: #10b981; margin-top: 0; }
       
-      /* Loading Animation */
-      .loader { border: 4px solid #f3f4f6; border-top: 4px solid var(--primary-color); border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; margin: 0 auto 15px auto; }
-      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-      .loading-container { text-align: center; padding: 20px; color: var(--text-muted); font-weight: 600; }
+      /* Subtle minimal loader */
+      .loading-container { text-align: center; padding: 10px; color: var(--text-muted); font-size: 14px; font-weight: 500; }
       
-      #feedback-section, #employee-section { opacity: 0.5; pointer-events: none; transition: opacity 0.3s ease; }
-      #feedback-section.active, #employee-section.active { opacity: 1; pointer-events: auto; }
+      #feedback-section, #employee-section { opacity: 0; pointer-events: none; transition: opacity 0.2s ease; height: 0; overflow: hidden; }
+      #feedback-section.active, #employee-section.active { opacity: 1; pointer-events: auto; height: auto; overflow: visible; }
     </style>
   </head>
   <body>
@@ -76,17 +74,16 @@
         <input type="hidden" id="departmentInput" name="department" value="">
         <input type="hidden" id="employeeNameInput" name="employeeName" value="">
         
+        <div class="card" style="border: none; box-shadow: none; padding: 0; margin-bottom: 0;">
+          <div id="loadingIndicator" class="loading-container">Loading...</div>
+        </div>
+
         <div class="card" id="employee-section">
           <div class="question-title">Select the employee you received service from<span class="required">*</span></div>
-          <div id="loadingIndicator" class="loading-container">
-            <div class="loader"></div>
-            Loading employees...
-          </div>
           <div class="employee-grid" id="employeeGridContainer"></div>
         </div>
 
         <div id="feedback-section">
-          
           <div class="card">
             <div class="question-title">How would you rate the service you received today?<span class="required">*</span></div>
             <div class="rating-group">
@@ -134,43 +131,85 @@
     </div>
 
     <script>
-      const API_URL = "https://script.google.com/macros/s/AKfycby6inBtwFjoumiyrVu7v9rHa-3wrgBfUw_8q-ItKo8flWmC6WRPSpGkyEnyad_AzduiBw/exec"; 
+      // ==========================================
+      // 1. INTEGRATED INSTANT CSV LINK
+      // ==========================================
+      const INSTANT_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdWNTzvgViqUdjKc0Fg41rJIM6rsp1Z7RxzJKQkefzq8YF2qyOQAzKACMzoq2K-Mcq5E9GwIWZh6eO/pub?gid=0&single=true&output=csv"; 
       
+      // ==========================================
+      // 2. INTEGRATED APPS SCRIPT URL (For Saving Feedback)
+      // ==========================================
+      const SAVE_API_URL = "https://script.google.com/macros/s/AKfycby6inBtwFjoumiyrVu7v9rHa-3wrgBfUw_8q-ItKo8flWmC6WRPSpGkyEnyad_AzduiBw/exec";
+
       const urlParams = new URLSearchParams(window.location.search);
       const targetDept = urlParams.get('dept') || "Accounting";
       
       document.getElementById('displayDept').innerText = targetDept;
       document.getElementById('departmentInput').value = targetDept;
 
-      // Fetch employees dynamically
-      fetch(API_URL + "?action=getEmployees&dept=" + encodeURIComponent(targetDept))
-        .then(response => response.json())
-        .then(employees => {
-          document.getElementById('loadingIndicator').style.display = 'none';
-          document.getElementById('employee-section').classList.add('active');
-          const grid = document.getElementById('employeeGridContainer');
+      // Simple CSV Parser
+      function parseCSV(text) {
+        const rows = [];
+        let currentRow = [];
+        let currentCell = '';
+        let inQuotes = false;
+        for (let i = 0; i < text.length; i++) {
+          const c = text[i];
+          if (c === '"') { inQuotes = !inQuotes; }
+          else if (c === ',' && !inQuotes) { currentRow.push(currentCell.trim()); currentCell = ''; }
+          else if (c === '\n' && !inQuotes) { currentRow.push(currentCell.trim()); rows.push(currentRow); currentRow = []; currentCell = ''; }
+          else { if (c !== '\r') currentCell += c; }
+        }
+        if (currentCell || currentRow.length > 0) { currentRow.push(currentCell.trim()); rows.push(currentRow); }
+        return rows;
+      }
+
+      // Fetch High-Speed CSV Data
+      fetch(INSTANT_CSV_URL)
+        .then(response => response.text())
+        .then(csvText => {
+          const data = parseCSV(csvText);
+          const headers = data[0];
           
-          if(employees.length === 0) {
-             grid.innerHTML = "<p style='grid-column: 1 / -1; text-align: center; color: #6b7280;'>No employees found for this department.</p>";
-             return;
+          const idIdx = headers.indexOf("Employee ID");
+          const nameIdx = headers.indexOf("Employee Name");
+          const deptIdx = headers.indexOf("Department");
+          const imgIdx = headers.indexOf("Image URL");
+
+          const grid = document.getElementById('employeeGridContainer');
+          let count = 0;
+
+          // Filter and Render
+          for (let i = 1; i < data.length; i++) {
+            if (data[i] && data[i][deptIdx] === targetDept) {
+              count++;
+              const empId = data[i][idIdx];
+              const empName = data[i][nameIdx];
+              const imgUrl = data[i][imgIdx];
+              const imgSource = imgUrl ? imgUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(empName)}&background=random&size=256`;
+              
+              const label = document.createElement('label');
+              label.className = 'employee-option';
+              label.innerHTML = `
+                <input type="radio" name="employeeId" value="${empId}" required onclick="selectEmployee('${empName.replace(/'/g, "\\'")}')">
+                <div class="employee-card">
+                  <div class="employee-img" style="background-image: url('${imgSource}'); background-size: cover; background-position: center;"></div>
+                  <div class="employee-name">${empName}</div>
+                </div>
+              `;
+              grid.appendChild(label);
+            }
           }
 
-          employees.forEach(emp => {
-            const imgSource = emp.imageUrl ? emp.imageUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(emp.name)}&background=random&size=256`;
-            const label = document.createElement('label');
-            label.className = 'employee-option';
-            label.innerHTML = `
-              <input type="radio" name="employeeId" value="${emp.id}" required onclick="selectEmployee('${emp.name.replace(/'/g, "\\'")}')">
-              <div class="employee-card">
-                <div class="employee-img" style="background-image: url('${imgSource}'); background-size: cover; background-position: center;"></div>
-                <div class="employee-name">${emp.name}</div>
-              </div>
-            `;
-            grid.appendChild(label);
-          });
+          if (count === 0) {
+            grid.innerHTML = "<p style='grid-column: 1 / -1; text-align: center; color: #6b7280;'>No employees found for this department.</p>";
+          }
+
+          document.getElementById('loadingIndicator').style.display = 'none';
+          document.getElementById('employee-section').classList.add('active');
         })
         .catch(error => {
-          document.getElementById('loadingIndicator').innerHTML = "Error loading employees. Please try reloading the page.";
+          document.getElementById('loadingIndicator').innerText = "Network issue. Please refresh the page.";
         });
 
       function selectEmployee(name) {
@@ -180,6 +219,7 @@
         setTimeout(() => feedbackSection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);
       }
 
+      // Submit Data to Apps Script
       document.getElementById('feedbackForm').addEventListener('submit', function(event) {
         event.preventDefault();
         const btn = document.getElementById('submitBtn');
@@ -187,7 +227,7 @@
         btn.innerText = "Submitting...";
 
         const formData = new FormData(this);
-        let submitUrl = API_URL + "?action=saveFeedback";
+        let submitUrl = SAVE_API_URL + "?action=saveFeedback";
         for (let [key, value] of formData.entries()) {
           submitUrl += `&${key}=${encodeURIComponent(value)}`;
         }
