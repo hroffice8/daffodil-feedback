@@ -1,1 +1,26 @@
+name: Auto-Sync Employee Data
 
+on:
+  schedule:
+    - cron: '*/20 * * * *' # The bot runs automatically every 20 minutes
+  workflow_dispatch: 
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Download Latest Data from Google
+        run: curl -L -o employees.csv "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdWNTzvgViqUdjKc0Fg41rJIM6rsp1Z7RxzJKQkefzq8YF2qyOQAzKACMzoq2K-Mcq5E9GwIWZh6eO/pub?gid=0&single=true&output=csv"
+
+      - name: Save to GitHub
+        run: |
+          git config --global user.name "Auto-Sync Bot"
+          git config --global user.email "action@github.com"
+          git add employees.csv
+          git commit -m "Auto-updated employee data" || exit 0
+          git push
