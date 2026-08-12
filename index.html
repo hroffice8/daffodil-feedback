@@ -25,14 +25,14 @@
       .question-title { font-weight: 600; font-size: 16px; color: var(--text-question); margin-bottom: 20px; line-height: 1.4; }
       .required { color: #ef4444; font-weight: bold; margin-left: 4px; }
       .optional-tag { color: var(--text-muted); font-weight: 400; font-size: 13px; margin-left: 4px; }
-      .text-input { width: 100%; padding: 14px; border: 1px solid var(--border-color); border-radius: 8px; box-sizing: border-box; font-family: inherit; font-size: 14px; background: var(--card-bg); color: var(--text-question); }
-      .text-input:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 1px var(--primary-color); }
+      
       .employee-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
       .employee-option input[type="radio"] { display: none; }
       .employee-card { position: relative; overflow: hidden; display: flex; flex-direction: column; border: 2px solid var(--border-color); border-radius: 10px; cursor: pointer; transition: all 0.2s ease; height: 150px; background: #e5e7eb; box-sizing: border-box; }
       .employee-option input[type="radio"]:checked + .employee-card { border-color: var(--primary-color); box-shadow: 0 0 0 2px var(--primary-color); }
       .employee-img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
       .employee-name { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); color: #ffffff; font-size: 13px; font-weight: 600; padding: 25px 8px 8px 8px; text-align: center; line-height: 1.2; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
+      
       .rating-group { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
       .rating-option { flex: 1; text-align: center; }
       .rating-option input[type="radio"] { display: none; }
@@ -40,20 +40,28 @@
       .rating-circle:hover { background: #f8fafc; }
       .rating-option input[type="radio"]:checked + .rating-circle { background: var(--primary-color); color: white; border-color: var(--primary-color); }
       .rating-labels { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); margin-top: 8px; padding: 0 2px; }
+      
       .radio-stack-option { display: flex; align-items: center; padding: 14px 16px; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 10px; cursor: pointer; transition: 0.2s; background: var(--card-bg); font-size: 14px; color: var(--text-answer); font-weight: 500; }
       .radio-stack-option:last-child { margin-bottom: 0; }
       .radio-stack-option:hover { background: #f8fafc; }
       .radio-stack-option input[type="radio"] { margin-right: 12px; accent-color: var(--primary-color); width: 18px; height: 18px; }
       .radio-stack-option input[type="radio"]:checked + span { font-weight: 700; color: var(--primary-color); }
+      
       textarea { width: 100%; padding: 14px; border: 1px solid var(--border-color); border-radius: 8px; box-sizing: border-box; font-family: inherit; font-size: 14px; resize: vertical; background: var(--card-bg); color: var(--text-question); }
       textarea:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 1px var(--primary-color); }
       button[type="submit"] { background-color: var(--primary-color); color: white; border: none; padding: 16px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; box-shadow: 0 4px 6px -1px rgba(37,99,235,0.2); transition: 0.2s; margin-top: 10px; }
       button[type="submit"]:hover { background-color: var(--primary-hover); }
+      
       .success-msg { display: none; text-align: center; padding: 40px 20px; background: white; border-radius: 12px; border: 1px solid var(--border-color); }
       .success-msg h2 { color: #10b981; margin-top: 0; }
+      
+      /* Loading Animation */
+      .loader { border: 4px solid #f3f4f6; border-top: 4px solid var(--primary-color); border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; margin: 0 auto 15px auto; }
+      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      .loading-container { text-align: center; padding: 20px; color: var(--text-muted); font-weight: 600; }
+      
       #feedback-section, #employee-section { opacity: 0.5; pointer-events: none; transition: opacity 0.3s ease; }
       #feedback-section.active, #employee-section.active { opacity: 1; pointer-events: auto; }
-      .loading { text-align: center; padding: 20px; color: var(--text-muted); font-weight: 600; }
     </style>
   </head>
   <body>
@@ -68,18 +76,17 @@
         <input type="hidden" id="departmentInput" name="department" value="">
         <input type="hidden" id="employeeNameInput" name="employeeName" value="">
         
-        <div class="card">
-          <div class="question-title">Your Email Address <span class="optional-tag">[Optional]</span></div>
-          <input type="email" name="userEmail" id="userEmail" class="text-input" placeholder="name@daffodilvarsity.edu.bd">
-        </div>
-
         <div class="card" id="employee-section">
           <div class="question-title">Select the employee you received service from<span class="required">*</span></div>
-          <div id="loadingIndicator" class="loading">Loading employees...</div>
+          <div id="loadingIndicator" class="loading-container">
+            <div class="loader"></div>
+            Loading employees...
+          </div>
           <div class="employee-grid" id="employeeGridContainer"></div>
         </div>
 
         <div id="feedback-section">
+          
           <div class="card">
             <div class="question-title">How would you rate the service you received today?<span class="required">*</span></div>
             <div class="rating-group">
@@ -113,7 +120,7 @@
 
           <div class="card">
             <div class="question-title">Comment <span class="optional-tag">[Optional]</span></div>
-            <textarea name="comment" id="commentBox" rows="3" placeholder="Tell us about your experience..."></textarea>
+            <textarea name="comment" rows="3" placeholder="Tell us about your experience..."></textarea>
           </div>
 
           <button type="submit" id="submitBtn">Submit Feedback</button>
@@ -127,7 +134,6 @@
     </div>
 
     <script>
-      // Automatically connects to your Google Sheet database
       const API_URL = "https://script.google.com/macros/s/AKfycby6inBtwFjoumiyrVu7v9rHa-3wrgBfUw_8q-ItKo8flWmC6WRPSpGkyEnyad_AzduiBw/exec"; 
       
       const urlParams = new URLSearchParams(window.location.search);
@@ -136,6 +142,7 @@
       document.getElementById('displayDept').innerText = targetDept;
       document.getElementById('departmentInput').value = targetDept;
 
+      // Fetch employees dynamically
       fetch(API_URL + "?action=getEmployees&dept=" + encodeURIComponent(targetDept))
         .then(response => response.json())
         .then(employees => {
@@ -143,9 +150,13 @@
           document.getElementById('employee-section').classList.add('active');
           const grid = document.getElementById('employeeGridContainer');
           
+          if(employees.length === 0) {
+             grid.innerHTML = "<p style='grid-column: 1 / -1; text-align: center; color: #6b7280;'>No employees found for this department.</p>";
+             return;
+          }
+
           employees.forEach(emp => {
             const imgSource = emp.imageUrl ? emp.imageUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(emp.name)}&background=random&size=256`;
-            
             const label = document.createElement('label');
             label.className = 'employee-option';
             label.innerHTML = `
@@ -159,7 +170,7 @@
           });
         })
         .catch(error => {
-          document.getElementById('loadingIndicator').innerText = "Error loading employees. Please try again.";
+          document.getElementById('loadingIndicator').innerHTML = "Error loading employees. Please try reloading the page.";
         });
 
       function selectEmployee(name) {
