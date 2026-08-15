@@ -229,28 +229,37 @@
 
         // --- SILENT TRACKING DATA GATHERING ---
         let ipAddress = "Unavailable", city = "Unknown", isp = "Unknown";
-        try {
-           const ipResponse = await fetch('https://ipapi.co/json/');
-           const ipData = await ipResponse.json();
-           ipAddress = ipData.ip || "Unavailable";
-           city = ipData.city || "Unknown";
-           isp = ipData.org || ipData.network || "Unknown";
-        } catch(error) {
-           console.log("Location fetch blocked or failed.");
-        }
-        
-        let deviceType = "Desktop";
-        let browserBrand = "Unknown";
-        let osInfo = navigator.userAgent;
+        let deviceType = "Desktop", browserBrand = "Unknown", osInfo = navigator.userAgent;
 
-        if (navigator.userAgentData) {
-           deviceType = navigator.userAgentData.mobile ? "Mobile" : "Desktop";
-           if (navigator.userAgentData.brands) {
-               browserBrand = navigator.userAgentData.brands.map(b => b.brand).join(", ");
+        // 1. Instantly grab device info
+        try {
+            if (navigator.userAgentData) {
+               deviceType = navigator.userAgentData.mobile ? "Mobile" : "Desktop";
+               if (navigator.userAgentData.brands) {
+                   browserBrand = navigator.userAgentData.brands.map(b => b.brand).join(", ");
+               }
+               osInfo = navigator.userAgentData.platform || navigator.userAgent;
+            } else if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+               deviceType = "Mobile";
+            }
+        } catch(e) {}
+
+        // 2. Safely grab location (with a 3-second timeout limit so the form doesn't freeze)
+        try {
+           const controller = new AbortController();
+           const timeoutId = setTimeout(() => controller.abort(), 3000); 
+           
+           const ipResponse = await fetch('https://ipapi.co/json/', { signal: controller.signal });
+           clearTimeout(timeoutId);
+           
+           if (ipResponse.ok) {
+               const ipData = await ipResponse.json();
+               ipAddress = ipData.ip || "Unavailable";
+               city = ipData.city || "Unknown";
+               isp = ipData.org || ipData.network || "Unknown";
            }
-           osInfo = navigator.userAgentData.platform || navigator.userAgent;
-        } else if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-           deviceType = "Mobile";
+        } catch(error) {
+           console.log("Location fetch blocked by Adblock or timed out.");
         }
         // ---------------------------------------
 
@@ -260,7 +269,7 @@
           submitUrl += `&${key}=${encodeURIComponent(value)}`;
         }
         
-        // Append tracking data
+        // Append tracking data to the URL
         submitUrl += `&ip=${encodeURIComponent(ipAddress)}`;
         submitUrl += `&city=${encodeURIComponent(city)}`;
         submitUrl += `&isp=${encodeURIComponent(isp)}`;
