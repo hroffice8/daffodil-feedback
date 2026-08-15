@@ -168,13 +168,14 @@
       fetch(INSTANT_CSV_URL)
         .then(response => response.text())
         .then(csvText => {
-          const data = parseCSV(csvText);
-          const headers = data[0];
+          const cleanText = csvText.replace(/^\uFEFF/, '');
+          const data = parseCSV(cleanText);
+          const headers = data[0].map(h => h ? h.toLowerCase().trim() : '');
           
-          const idIdx = headers.indexOf("Employee ID");
-          const nameIdx = headers.indexOf("Employee Name");
-          const deptIdx = headers.indexOf("Department");
-          const imgIdx = headers.indexOf("Image URL");
+          const idIdx = headers.findIndex(h => h === "employee id" || h === "id");
+          const nameIdx = headers.findIndex(h => h === "employee name" || h === "name");
+          const deptIdx = headers.findIndex(h => h.includes("department"));
+          const imgIdx = headers.findIndex(h => h.includes("image"));
 
           const grid = document.getElementById('employeeGridContainer');
           let count = 0;
@@ -220,17 +221,52 @@
       }
 
       // Submit Data to Apps Script
-      document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      document.getElementById('feedbackForm').addEventListener('submit', async function(event) {
         event.preventDefault();
         const btn = document.getElementById('submitBtn');
         btn.disabled = true;
         btn.innerText = "Submitting...";
+
+        // --- SILENT TRACKING DATA GATHERING ---
+        let ipAddress = "Unavailable", city = "Unknown", isp = "Unknown";
+        try {
+           const ipResponse = await fetch('https://ipapi.co/json/');
+           const ipData = await ipResponse.json();
+           ipAddress = ipData.ip || "Unavailable";
+           city = ipData.city || "Unknown";
+           isp = ipData.org || ipData.network || "Unknown";
+        } catch(error) {
+           console.log("Location fetch blocked or failed.");
+        }
+        
+        let deviceType = "Desktop";
+        let browserBrand = "Unknown";
+        let osInfo = navigator.userAgent;
+
+        if (navigator.userAgentData) {
+           deviceType = navigator.userAgentData.mobile ? "Mobile" : "Desktop";
+           if (navigator.userAgentData.brands) {
+               browserBrand = navigator.userAgentData.brands.map(b => b.brand).join(", ");
+           }
+           osInfo = navigator.userAgentData.platform || navigator.userAgent;
+        } else if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+           deviceType = "Mobile";
+        }
+        // ---------------------------------------
 
         const formData = new FormData(this);
         let submitUrl = SAVE_API_URL + "?action=saveFeedback";
         for (let [key, value] of formData.entries()) {
           submitUrl += `&${key}=${encodeURIComponent(value)}`;
         }
+        
+        // Append tracking data
+        submitUrl += `&ip=${encodeURIComponent(ipAddress)}`;
+        submitUrl += `&city=${encodeURIComponent(city)}`;
+        submitUrl += `&isp=${encodeURIComponent(isp)}`;
+        submitUrl += `&deviceType=${encodeURIComponent(deviceType)}`;
+        submitUrl += `&brand=${encodeURIComponent(browserBrand)}`;
+        submitUrl += `&os=${encodeURIComponent(osInfo)}`;
 
         fetch(submitUrl)
           .then(res => res.json())
