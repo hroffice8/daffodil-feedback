@@ -1,6 +1,6 @@
 Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,Image URL
 710000040,Sanjida Amin,Student Counselor,Admission & Counselling,Regular,Admin,Daffodil International University (DIU),Administration,
-710000885,Mir Muhammad Ehsanul Haque,Senior Student Counselor,Admission & Counselling,Regular,Admin,Daffodil International University (DIU),Administration,
+710000885,Mir Muhammad Ehsanul Haque,Senior Student Counselor,Admission & Counselling,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1QMEX3A4SjE1JMi2Xj2bbOB8PKxqiNTjx&sz=w400
 710000927,Tania Naznin,Assistant Director,Admission & Counselling,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1DYCw5GJtVMA9JlLphc-a2xsVu8ZCuNEb&sz=w400
 710001001,Md. Faruq Hushain,Senior Administrative Officer,Admission & Counselling,Regular,Admin,Daffodil International University (DIU),Administration,
 710003677,Sabrina Khaled Borna,Assistant Administrative Officer,Admission & Counselling,Probation,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1-Z9XBpkYtHyROswjEBx21e5dKn8btfPm&sz=w400
@@ -18,7 +18,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 740001091,Md. Abdullah Al Maruf,Student Associate,Admission & Counselling,Part-time,Admin,Daffodil International University (DIU),Administration,
 740001096,Md. Junaied Hasan Shakil Kazi,Student Associate,Admission & Counselling,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1gK5j0ZEelthiDzoRYjNi0XZsuhedIuVq&sz=w400
 740001098,Md. Samiul Islam,Student Associate,Admission & Counselling,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1RILKh6OYV8tEHatq_aKY4akWj6gCzJDv&sz=w400
-710000435,Md. Didar Hossain Prodhania,Staff,Admission & Counselling,Regular,Below Officer,Daffodil International University (DIU),Administration,
+710000435,Md. Didar Hossain Prodhania,Staff,Admission & Counselling,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1IuKaZh8gZJ5hk6ufO9D8XC-4tT0nsyeR&sz=w400
 710001070,Md. Faisal Bepary,Office Assistant,Admission & Counselling,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1a8xuS-VLwo0nTs5QOt-WHP3UWaK5XW7U&sz=w400
 710004012,Md. Rajone Hassan Radid,Staff,Admission & Counselling,Ad hoc,Below Officer,Daffodil International University (DIU),Administration,
 710001594,Khorshed Alam,Staff,Admission & Counselling,Regular,Below Officer,Daffodil International University (DIU),Administration,
@@ -49,7 +49,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710003005,Prity Ali,Assistant Administrative Officer,Career Development Center,Regular,Admin,Daffodil International University (DIU),Administration,
 710003642,Farzana Khan Riya,Assistant Administrative Officer,Career Development Center,Regular,Admin,Daffodil International University (DIU),Administration,
 710003675,Md. Nasim Howlader,Assistant Director,Career Development Center,Regular,Admin,Daffodil International University (DIU),Administration,
-710003680,Naeem Bapary,Assistant Administrative Officer,Career Development Center,Regular,Admin,Daffodil International University (DIU),Administration,
+710003680,Naeem Bapary,Assistant Administrative Officer,Career Development Center,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1crZTe_m8E0gw4TXxSf4tL0kEMEMcajwn&sz=w400
 740000929,Koushik Ahmed,Student Associate,Career Development Center,Part-time,Admin,Daffodil International University (DIU),Administration,
 740000934,Alinda Saha,Student Associate,Career Development Center,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1edbn3ePkj38-isAJ3ALSWa5YzIhxH4jh&sz=w400
 740000975,Md. Raseduzzaman,Student Associate,Career Development Center,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1nggWBIWbUx7NcaSb_O3mUTX6jbXblK4W&sz=w400
@@ -107,16 +107,10 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710002430,Md. Jihad Hossain,Staff,Department of Civil Engineering,Regular,Below Officer,Daffodil International University (DIU),Faculty of Engineering,https://drive.google.com/thumbnail?id=1pKnWyZmBx9l9BvIOvNCjz6pPNDZxUUwb&sz=w400
 710002950,Md. Asadul Hoque,Staff,Department of Civil Engineering,Regular,Below Officer,Daffodil International University (DIU),Faculty of Engineering,
 710002158,Md. Towhiduzzaman,Senior Coordination Officer,Department of Computer Science & Engineering,Regular,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1W3kXiB1uGZPntiEt3X5MNZUDq-R7RGLE&sz=w400
-710002805,Md. Faridul Islam Suny,Assistant Technical Officer,Department of Computer Science & Engineering,Regular,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1s-vRQdMpulKsoszjUrIMSgHz9o9gLV0L&sz=w400
-740000998,Md. Moinul Islam,Teaching Assistant,Department of Computer Science & Engineering,Part-time,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1W5MF2yiVgKRf_-cE-_1rUocey5zW-Gjc&sz=w400
-740001048,Md. Sabbir Ahamed,Teaching Assistant,Department of Computer Science & Engineering,Part-time,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,
-740001015,Md. Rony,Teaching Assistant,Department of Computer Science & Engineering,Part-time,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,
-740001046,Pulak Deb Nath,Teaching Assistant,Department of Computer Science & Engineering,Part-time,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1HjBcBmqfTufSLDgJ-Le8qo4uGWYH_3vo&sz=w400
 710003970,Muhammad Tawhid Hasan,Assistant Coordination Officer,Department of Computer Science & Engineering,Ad hoc,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1Uhc-umhD6b0SIbqla14Lyg3u7ITvDj2m&sz=w400
 710003254,Afrina Sultana,Assistant Coordination Officer,Department of Computer Science & Engineering,Regular,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1a8kaEG5G4L96yfDqIAhupyahO_rPsCpK&sz=w400
 710002608,Md. Sorower Mal,Coordination Officer,Department of Computer Science & Engineering,Regular,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1MNpkfIxhZKdTvOjyE61kWvCkr7yT9C6M&sz=w400
 710001568,Md. Abul Bashar,Assistant Registrar,Department of Computer Science & Engineering,Regular,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1P81y25rJs_5bBSEHtP7IKqiwU8zLM2Js&sz=w400
-740001029,Delowar Husain,Student Associate,Department of Computer Science & Engineering,Part-time,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1ifKFTsnt4QJ9gn7hX20yvYqsFCXaNdUp&sz=w400
 710000847,Md. Solayman,Staff,Department of Computer Science & Engineering,Regular,Below Officer,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1rJLt2JrLXkYYlzi_RN34QJnnSQoHksc_&sz=w400
 710001147,Md. Kawsar Patwary,Office Assistant,Department of Computer Science & Engineering,Regular,Below Officer,Daffodil International University (DIU),Faculty of Science & Information Technology,
 710001843,Md. Lokman Hossain,Staff,Department of Computer Science & Engineering,Regular,Below Officer,Daffodil International University (DIU),Faculty of Science & Information Technology,
@@ -151,7 +145,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710003126,Shahzahan Mia,Staff,Department of Electrical and Electronic Engineering,Regular,Below Officer,Daffodil International University (DIU),Faculty of Engineering,
 740000997,Md. Awsaf Iqbal Chowdhury,Graduate Teaching Assistant (GTA),Department of Electronics and Telecommunication Engineering,Part-time,Admin,Daffodil International University (DIU),Faculty of Engineering,https://drive.google.com/thumbnail?id=1KUM5sErR1lWG5gQaJdCZMxY1AtyDCF2S&sz=w400
 740001010,Jannatul Fardus,Student Associate,Department of Electronics and Telecommunication Engineering,Part-time,Admin,Daffodil International University (DIU),Faculty of Engineering,https://drive.google.com/thumbnail?id=1DuuSZkb0Q7HZXC3d8-RHLhN8sWEz8q4m&sz=w400
-710001407,Mr. Billal Khan,Office Attendant,Department of Electronics and Telecommunication Engineering,Regular,Below Officer,Daffodil International University (DIU),Faculty of Engineering,https://drive.google.com/thumbnail?id=1CysRrd_Q9yLtTeB87KSwsimR-tqzXbS6&sz=w400
+710001407,Mr. Billal Khan,Office Attendant,Department of Electronics and Telecommunication Engineering,Regular,Below Officer,Daffodil International University (DIU),Faculty of Engineering,https://drive.google.com/thumbnail?id=1cO_UO5ofCBqtek4P-TBXX45e4Ld-J-H-&sz=w400
 740001088,Montakir Emtiaz Ahmed Rafid,Teaching Assistant,Department of English,Part-time,Admin,Daffodil International University (DIU),Faculty of Humanities & Social Sciences,https://drive.google.com/thumbnail?id=1lN1w3FBIg-YNJgR6lVCEZgDJl4h963LY&sz=w400
 740000884,Jannatul Mawa Jui,Teaching Assistant,Department of English,Part-time,Admin,Daffodil International University (DIU),Faculty of Humanities & Social Sciences,
 740001071,Yeasin Arafat,Teaching Assistant,Department of English,Part-time,Admin,Daffodil International University (DIU),Faculty of Humanities & Social Sciences,https://drive.google.com/thumbnail?id=10qsGuPyX57I0V_lmmk7vgyRbjJK3w37x&sz=w400
@@ -331,7 +325,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710000835,Muhammad Arif Sheikh,Assistant Director,Finance & Accounts,Regular,Admin,Daffodil International University (DIU),Administration,
 710001943,Md. Sakayat Hossain,Sr. Accounts Officer,Finance & Accounts,Regular,Admin,Daffodil International University (DIU),Administration,
 740000971,Sumaiya Akter,Student Associate,Finance & Accounts,Part-time,Admin,Daffodil International University (DIU),Administration,
-740001107,Samanta Afrin,Student Associate,Finance & Accounts,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=18g0j2frjbRTR9Rp9kkWc4TBzcpSazLZu&sz=w400
+740001107,Samanta Afrin,Student Associate,Finance & Accounts,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1_M8Wq219lmm07DMcpp8QAP0606_pkEso&sz=w400
 740001106,Sania Mahzabin,Student Associate,Finance & Accounts,Part-time,Admin,Daffodil International University (DIU),Administration,
 740000932,Md. Sahadut Hossain,Student Associate,Finance & Accounts,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1kAT07b3cyJvzRiAu-Qm70wW-zO9vqWfd&sz=w400
 710003790,Arif Hossen,Sr. Accounts Officer,Finance & Accounts,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1L2SC3GoQa5EwPrpRC5e45KgEAmgrKMYU&sz=w400
@@ -350,7 +344,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 740000802,Mahadi Hasan Mahim,Student Associate,HRDI,Part-time,Admin,Daffodil International University (DIU),Administration,
 740000803,Siam Akter Sajit,Student Associate,HRDI,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1_mZmXRkmcrCp8XyXSLuf9YOKJXm7VBjY&sz=w400
 740000825,Ms. Adiba Zaman Chowdhury,Sales Executive,HRDI,Contractual,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=13f4qWWBiISgcY1HdIRoem1R8KBDdw5sK&sz=w400
-740000930,Sadia Afrin Porna,Student Associate,HRDI,Part-time,Admin,Daffodil International University (DIU),Administration,
+740000930,Sadia Afrin Porna,Student Associate,HRDI,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1aTPdfs6lwtMXAM9v_dp27DWuzlh6NOdB&sz=w400
 710000710,Obayed Chowdhury,Assistant Director,HRDI,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1RFN3TAfiAjHTcCVFfnhsPAYqNzeS0_9m&sz=w400
 710003184,Amir Hamza,Assistant Director,HRDI,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1A8F1hXoopPulDS1Au17u7Yn9PIosjHYE&sz=w400
 710004119,Nirupom Debnath,Assistant Administrative Officer,HRDI,Ad hoc,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1Uj95K0u2-qVVF85qV1jQKZEJZfrrARZy&sz=w400
@@ -488,7 +482,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710003819,Mr. Md. Imam Hasan,Office Attendant,Maintenance Section,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1jWL9YRgaUjNGXaasaYRUs3iTp0UHeNDf&sz=w400
 710003651,Md. Ibrahim Mizi,Office Assistant,Maintenance Section,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1aL-4Xy01iVba4XsUUpLJ-sM7wHDNOo5M&sz=w400
 710003212,Shoriful Islam,Staff,Maintenance Section,Regular,Below Officer,Daffodil International University (DIU),Administration,
-710003106,Mr. Md. Mostakim Rahman,Office Assistant,Maintenance Section,Regular,Below Officer,Daffodil International University (DIU),Administration,
+710003106,Mr. Md. Mostakim Rahman,Office Assistant,Maintenance Section,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=17kL0zemYqC8OPgtztLyHzj4jrljr2fVd&sz=w400
 710003108,Md. Sunny Alam,Office Assistant,Maintenance Section,Regular,Below Officer,Daffodil International University (DIU),Administration,
 710003110,Md. Rezoanul Islam,Sub Assistant Engineer,Maintenance Section,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1yPnamQHYxygRJ6khekzqDGT7ehZGNTHb&sz=w400
 710002973,Akram Hossian,Staff,Maintenance Section,Regular,Below Officer,Daffodil International University (DIU),Administration,
@@ -545,7 +539,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710001877,Sumaiya Hider Samia,Senior Administrative Officer,"Office of the Chairman, BoT",Regular,Admin,Daffodil International University (DIU),Administration,
 710002283,Muhammad Arif Hossain,Administrative Officer,"Office of the Chairman, BoT",Regular,Admin,Daffodil International University (DIU),Administration,
 710002679,Imrul Hasan Tusher,Senior Administrative Officer,"Office of the Chairman, BoT",Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=11BjZAjjRVfavIsDcSYpqL-KE6YYk7uqU&sz=w400
-710002830,Razia Sultana,Office superintendent,"Office of the Chairman, BoT",Regular,Admin,Daffodil International University (DIU),Administration,
+710002830,Razia Sultana,Office superintendent,"Office of the Chairman, BoT",Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=18zrBBUWrzN4XwNiLUaKFJ2BXxjKkaxAv&sz=w400
 710003319,Md Kafiul Bin Islam,Administrative Officer,"Office of the Chairman, BoT",Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1dY02IP_1LtbJnlznERXIZxbPv9wh4gah&sz=w400
 710003876,Yeasin Dewan,Assistant Administrative Officer,"Office of the Chairman, BoT",Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1FnI-hG68IOTCuY0uu8-kzU8RixHSo3p8&sz=w400
 710002820,Afroza Rahman Asha,Assistant Content Developer,"Office of the Chairman, BoT",Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1Io8vLna8iaVyOXvPIxhNuvJlCeh4vE5V&sz=w400
@@ -649,7 +643,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710002504,Engr. Md. Shahinuzzaman,Senior Assistant Engineer,Planning & Development,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1vhZVWm_ARNzbP0f5xduhJqY4G4lPMO4u&sz=w400
 710003969,Robiul Islam Chowdhury,Assistant Engineer,Planning & Development,Ad hoc,Admin,Daffodil International University (DIU),Administration,
 710003114,Md. Saschu Mia,Assistant Engineer,Planning & Development,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1A2wGDH-1FaorRWLGpxtzgh-650GfEtOv&sz=w400
-710002440,Engr. Md Ahsan Kabir,Engineer,Planning & Development,Regular,Admin,Daffodil International University (DIU),Administration,
+710002440,Engr. Md Ahsan Kabir,Engineer,Planning & Development,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=17-9ZMFJ-9YQrijVwh4DnDLrUt_IMr3gs&sz=w400
 710002746,Engr. Md. Mehedi Hasan,Assistant Engineer,Planning & Development,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1ljgZhmdY2khIAWchYJT_eIiltfFOdfcw&sz=w400
 740000590,Engr. Md. Tonmoy Alam Setu,Assistant Engineer,Planning & Development,Contractual,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1fl_RTE3rzVZqpBSaSYg_Mu1z0MLDMSUX&sz=w400
 710003509,Engr. Md. Rabiul Islam Sajeb,Assistant Engineer,Planning & Development,Probation,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1620jt_rsXGkwk1n-8d0P3PqljcRimP_z&sz=w400
@@ -673,7 +667,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710000293,Md. Anowar Habib,Senior Assistant Director,Public Relation,Regular,Admin,Daffodil International University (DIU),Administration,
 710003142,Md. Yeasin Ali,Staff,Public Relation,Regular,Below Officer,Daffodil International University (DIU),Administration,
 710000366,Rasel Prodhania,Deputy Director,Purchase and Procurement,Regular,Admin,Daffodil International University (DIU),Administration,
-710001652,Mr. Syeed Emam Sharif,Assistant Director,Purchase and Procurement,Regular,Admin,Daffodil International University (DIU),Administration,
+710001652,Mr. Syeed Emam Sharif,Assistant Director,Purchase and Procurement,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1nVq5K1SClERCOCTNtb_FSURH-OkqoT5C&sz=w400
 710002410,Rayhan Hasan,Asst. Accounts Officer,Purchase and Procurement,Regular,Admin,Daffodil International University (DIU),Administration,
 740001036,Engr. Md. Onmoy Hosen,Intern,Purchase and Procurement,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1xrMIn7YzrdDAqgSD-rhY1JpzFDEbFQzj&sz=w400
 740000954,Md. Nazmul Hasan,Student Associate,Purchase and Procurement,Part-time,Admin,Daffodil International University (DIU),Administration,
@@ -752,7 +746,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710002747,Md. Salauddin Khan,Assistant Administrative Officer,Store Management,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1HKjTHBL3SghJrIb_yaL3ZG6RLuA-uQaD&sz=w400
 710000893,Abdul Mazed,Office Attendant,Store Management,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1YfxPEhTUZcBtu746SXcLTZHHZ7EpMMq0&sz=w400
 710002408,Md. Nazmul Hoque,Staff,Store Management,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1-nPHkqqwH4aiJ9OfIl2mSk_fGg7sspsi&sz=w400
-710004009,Md. Fakrul Islam,Office Attendant,Store Management,Ad hoc,Below Officer,Daffodil International University (DIU),Administration,
+710004009,Md. Fakrul Islam,Office Attendant,Store Management,Ad hoc,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1VL4GvwaOZBS14_IzPvNcuc-4QH4euVO0&sz=w400
 740001030,Md. Mehedi Hasan,Student Associate,Test,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=17-SMpSXwJwxDno-TgOww4Qo73Ebt6Wg_&sz=w400
 710000344,Md. Monir Ul Enam,Assistant Administrative Officer,Transport,Regular,Admin,Daffodil International University (DIU),Administration,
 710002300,Md. Ansur Rahman,Administrative Officer,Transport,Regular,Admin,Daffodil International University (DIU),Administration,
@@ -770,7 +764,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710000643,Mohammed Abu Faysal,Senior Web Developer,Web Section,Regular,Admin,Daffodil International University (DIU),Administration,
 710001174,Md. Milton,Senior Web Developer,Web Section,Regular,Admin,Daffodil International University (DIU),Administration,
 710003530,Afsana Begum,Junior Software Engineer,Web Section,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1OGKxDoQDrQ4qVD5OcGJLd8cQhmh5_Ups&sz=w400
-710003676,MD SHAKIL KHAN,Junior Software Developer,Web Section,Regular,Admin,Daffodil International University (DIU),Administration,
+710003676,MD SHAKIL KHAN,Junior Software Developer,Web Section,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1TxBJpW3p_zkRJxx28C-07TrMTnRYkxo3&sz=w400
 710004151,Md. Mahmudul Huq Topu,Assistant Director,Web Section,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1VEdyAlosBWvMZ3Ss6sKnS7Dp1d_RAXk_&sz=w400
 710002967,Mahmud Hasan,Assistant Software Engineer,Web Section,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1rylT9HUztDsX7ZywNADSwaVlrwVf2GR1&sz=w400
 710002959,Md. Jannat-UL Naim,Assistant Software Engineer,Web Section,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1c3KEB7QlaOfrxRsxTmfncgIhf9QXcY06&sz=w400
