@@ -244,20 +244,28 @@
             }
         } catch(e) {}
 
-        // 2. Safely grab location (with a 3-second timeout limit so the form doesn't freeze)
+        // 2. Safely grab location (with Fallbacks for high traffic)
         try {
            const controller = new AbortController();
-           const timeoutId = setTimeout(() => controller.abort(), 3000); 
+           const timeoutId = setTimeout(() => controller.abort(), 4000); // 4 second max wait
            
-           const ipResponse = await fetch('https://ipapi.co/json/', { signal: controller.signal });
-           clearTimeout(timeoutId);
+           // Primary Attempt: ipwho.is (Generous limits, includes ISP/City)
+           let locResponse = await fetch('https://ipwho.is/', { signal: controller.signal });
+           let locData = await locResponse.json();
            
-           if (ipResponse.ok) {
-               const ipData = await ipResponse.json();
-               ipAddress = ipData.ip || "Unavailable";
-               city = ipData.city || "Unknown";
-               isp = ipData.org || ipData.network || "Unknown";
+           if (locData.success) {
+               ipAddress = locData.ip || "Unavailable";
+               city = locData.city || "Unknown";
+               isp = (locData.connection && locData.connection.isp) ? locData.connection.isp : "Unknown";
+           } else {
+               // Backup Attempt: ipify (Strictly IP address, no rate limits)
+               let backupResponse = await fetch('https://api.ipify.org?format=json', { signal: controller.signal });
+               let backupData = await backupResponse.json();
+               ipAddress = backupData.ip || "Unavailable";
+               city = "Rate Limited";
+               isp = "Rate Limited";
            }
+           clearTimeout(timeoutId);
         } catch(error) {
            console.log("Location fetch blocked by Adblock or timed out.");
         }
