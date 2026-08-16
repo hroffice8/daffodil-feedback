@@ -1,5 +1,5 @@
 Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,Image URL
-710000295,Md. Siddiqul Alam,Deputy Director,Admission & Counselling,Regular,Admin,Daffodil International University (DIU),Administration,
+710000295,Md. Siddiqul Alam,Deputy Director,Admission & Counselling,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1mWYlsMF73XxKn-GnPZ0-2UmzVqsVE0Gj&sz=w400
 710000040,Sanjida Amin,Student Counselor,Admission & Counselling,Regular,Admin,Daffodil International University (DIU),Administration,
 710000435,Md. Didar Hossain Prodhania,Staff,Admission & Counselling,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1IuKaZh8gZJ5hk6ufO9D8XC-4tT0nsyeR&sz=w400
 710000841,Md. Kayum Hossain Khan,Assistant Development Officer,Admission & Counselling,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1pCxMYxkklz6RmNIl0EQYJE71cfzhvExS&sz=w400
@@ -172,7 +172,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710003633,Md. Shahidul Islam Shimul,Assistant Coordination Officer,Department of Information & Communication Engineering,Regular,Admin,Daffodil International University (DIU),Faculty of Engineering,https://drive.google.com/thumbnail?id=1-AEjwrV-bEFmnY7Gfq_7mvT4LIZJT1LF&sz=w400
 710004147,Md. Sazib,Lab Attendant,Department of Information & Communication Engineering,Ad hoc,Admin,Daffodil International University (DIU),Faculty of Engineering,https://drive.google.com/thumbnail?id=1BQHf-pqLlc6b6xf0sQFzrBwb-TrFXstM&sz=w400
 740001053,Tasikul Islam,Teaching Assistant,Department of Information & Communication Engineering,Part-time,Admin,Daffodil International University (DIU),Faculty of Engineering,https://drive.google.com/thumbnail?id=13l9OLcxGPJq0cSB33t60OyHjbf0q5kFF&sz=w400
-710002888,Mahmuda Khatun,Coordination Officer,Department of Information Technology & Management (ITM),Regular,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,
+710002888,Mahmuda Khatun,Coordination Officer,Department of Information Technology & Management (ITM),Regular,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1HtCAL6qmpxUBAi3BNXAmPVM-ZPhEMrYf&sz=w400
 710003258,Md. Milon Hossain,Staff,Department of Information Technology & Management (ITM),Regular,Below Officer,Daffodil International University (DIU),Faculty of Science & Information Technology,https://drive.google.com/thumbnail?id=1qmb-BKetvrltALlnr4W33fyCJKFzpfD4&sz=w400
 710004020,Md. Nasimur Rahman,IT Staff,Department of Information Technology & Management (ITM),Ad hoc,Below Officer,Daffodil International University (DIU),Faculty of Science & Information Technology,
 740001013,Irfat Nur Aboni,Teaching Assistant,Department of Information Technology & Management (ITM),Part-time,Admin,Daffodil International University (DIU),Faculty of Science & Information Technology,
@@ -465,7 +465,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710002519,Md. Rashed Nizami,Sr. Assistant Librarian,Library,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1thiMGjJXrekdVwbdpxkttPqN9MTST6u9&sz=w400
 710002840,Md. Sohorab Mondol,Office Attendant,Library,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1Vz9Ce0vX3dElhWhXYeEQ25PovX_37mn7&sz=w400
 710003025,Dhiman Sarker,Asst. IT Officer,Library,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1NXy0HU29IKRDLIUOLLVO-s6cIfPyQfiR&sz=w400
-710003194,Rajon Chandra Das,Staff,Library,Regular,Below Officer,Daffodil International University (DIU),Administration,
+710003194,Rajon Chandra Das,Staff,Library,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1QoYXk2WsaByYyNP-3lXwc_nyVDReP4vQ&sz=w400
 710003678,Syed Robiul Bashar,Additional Librarian,Library,Contractual,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1cuagZRgu_k5yX1BFVfhYOZZCVcDwAdSS&sz=w400
 740000848,Md. Shibli Ahamed,Student Associate,Library,Part-time,Admin,Daffodil International University (DIU),Administration,
 740000887,Zahid Hasan,Student Associate,Library,Part-time,Admin,Daffodil International University (DIU),Administration,
@@ -553,7 +553,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710003318,Sadia Arafin,Assistant Administrative Officer,Office of the Controller of Examinations,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1W8wHK0Z0wXPUQ6JYY8GE7zzkpiHZiLQO&sz=w400
 710003628,Mr. Vivian Ghosh,Assistant Exam Officer,Office of the Controller of Examinations,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1GnMa4c4he1mCDizp2OlfB5okcJ8E_4YB&sz=w400
 710003644,Sazia Monihar,Assistant Exam Officer,Office of the Controller of Examinations,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1d5hKi6XMWa1V3ksZiESSIiuvDZYT8lpH&sz=w400
-710003320,Rumman Ahmed,Assistant Administrative Officer,"Office of the future, DIU",Regular,Admin,Daffodil International University (DIU),Administration,
+710003320,Rumman Ahmed,Assistant Administrative Officer,"Office of the future, DIU",Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1pqM0gDwu2HlUo-2hf2F2lKRMtUng36Oe&sz=w400
 710000043,"Prof. Mohammed Masum Iqbal, PhD",Pro Vice Chancellor,Office of the Pro-VC,Regular,Admin,Daffodil International University (DIU),Administration,
 710001192,Shah Muhammad Sadiur Rahman,Assistant Director,Office of the Pro-VC,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1ylXkwI1JAqcdt-BnfaDnGBwYX8qQZ6FN&sz=w400
 710003968,Nadim Islam,Assistant Administrative Officer,Office of the Pro-VC,Ad hoc,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1DV4PBITlJGPWZdD1c7DaMEIG2TsMIny5&sz=w400
@@ -574,7 +574,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 740000923,Abdullah Al Mamun,Assistant Administrative Officer,Office of the Registrar,Contractual,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1gHTK6oykyUytx-R7IMtbKGQLAZqXfO20&sz=w400
 710000235,Md. Hasan Mizi,Office Attendant,Office of the Registrar,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1xP0P-cz1XGjuuf7jGhVe1B_y1SHoV60X&sz=w400
 710001134,Md. Rasel Bepary,Office Attendant,Office of the Registrar,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1MVnNj7PmYOfvMH81aKbdamMwJr5vnOpd&sz=w400
-710003840,Mr. Md. Soikot Mondol,Staff,Office of the Registrar,Regular,Below Officer,Daffodil International University (DIU),Administration,
+710003840,Mr. Md. Soikot Mondol,Staff,Office of the Registrar,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1V2VlxPljyY1ck7qrrKEr_bsXfP6GLEfm&sz=w400
 740001060,Udoy Krishna Debnath,Intern,Office of the Registrar,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=16rr6Y9T--JK9a417d0juOoaTcM2EnLG7&sz=w400
 710001647,Fahmi Hasan,Assistant Director,Office of the Students' Affairs,Regular,Admin,Daffodil International University (DIU),Administration,
 710002170,Bilkis Khanam,Psychologist,Office of the Students' Affairs,Regular,Admin,Daffodil International University (DIU),Administration,
@@ -601,11 +601,11 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710003537,Md. Sabbir Hossen,Staff,Office of the Treasurer,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1J9l3jdspcKn-cKPxjFExWmtoirwxhmQI&sz=w400
 710002683,Prof. Dr. M. R. Kabir,Vice Chancellor,Office of the Vice Chancellor,Regular,Admin,Daffodil International University (DIU),Administration,
 710000010,Md. Abdur Rumman Khan,Deputy Registrar,Office of the Vice Chancellor,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1udAU7-AZLifVSOnNhyGd3FEl3avRDLCs&sz=w400
-710002603,Md. Nazmul Hasan,Senior Administrative Officer,Office of the Vice Chancellor,Regular,Admin,Daffodil International University (DIU),Administration,
+710002603,Md. Nazmul Hasan,Senior Administrative Officer,Office of the Vice Chancellor,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1YQjXBLNAKSoMooZYt74TGKGlM7yuyPck&sz=w400
 710004068,Sahadat Hossain Rahat,Administrative Officer,Office of the Vice Chancellor,Ad hoc,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1q_HweUefZuVPNdH2r4P3flOAgY_a5osZ&sz=w400
 740001031,Md. Jawadul Islam,Student Associate,Office of the Vice Chancellor,Part-time,Admin,Daffodil International University (DIU),Administration,
 740001032,Nusrat Sadia Hossain,Student Associate,Office of the Vice Chancellor,Part-time,Admin,Daffodil International University (DIU),Administration,
-710000116,Md. Dodul Mia,Staff,Office of the Vice Chancellor,Regular,Below Officer,Daffodil International University (DIU),Administration,
+710000116,Md. Dodul Mia,Staff,Office of the Vice Chancellor,Regular,Below Officer,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1Hdzn3veAbIzSS-S4norKAxTqXn1jbc52&sz=w400
 710001368,Engr. Major Md. Arman Ali Bhuiyan (retd),Director,Planning & Development,Contractual,Admin,Daffodil International University (DIU),Administration,
 710000772,Md. Sabbir Ahamed,Additional Director,Planning & Development,Regular,Admin,Daffodil International University (DIU),Administration,
 710000167,Najim Uddin Sharker,Joint Director,Planning & Development,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1milBPdOwYOEePBsP0RrYFS3PvoNaFRka&sz=w400
@@ -699,7 +699,7 @@ Employee ID,Employee Name,Designation,Department,Category,Type,Company,Faculty,I
 710002300,Md. Ansur Rahman,Administrative Officer,Transport,Regular,Admin,Daffodil International University (DIU),Administration,
 740000912,Md. Monoar Karim,Student Associate,Transport,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1BnjWWZpz2bzVZigB68S2VS1wbCUEfMbt&sz=w400
 740000913,Obydur Rahman Niaz,Student Associate,Transport,Part-time,Admin,Daffodil International University (DIU),Administration,
-740000984,Maj. (retd) khandaker Murshed Zaman kallol,Director,Transport,Contractual,Admin,Daffodil International University (DIU),Administration,
+740000984,Maj. (retd) khandaker Murshed Zaman kallol,Director,Transport,Contractual,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1eu1lKkOWEUqx5VynU3eKHs72nezf1akT&sz=w400
 740001018,Md. Nazmul Haque Nayem,Student Associate,Transport,Part-time,Admin,Daffodil International University (DIU),Administration,
 740001100,Koushik Chakrobortty,Student Associate,Transport,Part-time,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1nJMEQ8ESVZKFhloC_e0ZGxmesLku1N16&sz=w400
 710000424,Muntachir Razzaque,Senior Assistant Director,Web Section,Regular,Admin,Daffodil International University (DIU),Administration,https://drive.google.com/thumbnail?id=1n6r_beWQI3NRzEk1RLpI5qq1RypO2-em&sz=w400
